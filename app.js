@@ -9,8 +9,8 @@ function myController($scope, $http){
       $scope.country = data[0];
       findCountry(data[0]);
     });
-    // cannot put here since the scope is update each time
-    // $scope.$watch('getInfo',function(){
+    // cannot put here since the scope is updated each time
+    // $scope.$watch('getInfo',function(newVal, oldVal){
     //   alert('Changed !');
     // });
   };
