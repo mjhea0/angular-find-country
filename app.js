@@ -9,15 +9,14 @@ function myController($scope, $http){
       $scope.country = data[0];
       findCountry(data[0]);
     });
-    // cannot put here since the scope is updated each time
-    $scope.$watch('inputCountry',function(newValue, oldValue){
-      console.log('new',newValue)
-      console.log('old',oldValue)
-      if (newValue == oldValue) {
-        alert('Changed !');
-      }
-    });
   };
+  $scope.$watch('inputCountry',function(newValue, oldValue){
+    console.log('new',newValue)
+    console.log('old',oldValue)
+    if (newValue == oldValue) {
+      alert('Changed !');
+    }
+  });
 };
 
 var map;
